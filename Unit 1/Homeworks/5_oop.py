@@ -12,20 +12,19 @@ area = rect.get_area()
 print(area)
 
 class Vehicle:
-  def __init__(self,max_speed,mileage) -> None:
+  def __init__(self,max_speed,mileage):
     self.max_speed = max_speed
     self.mileage = mileage
     
     
 class VehicleEmpty:
-  def __init__(self) -> None:
-    pass
-
+  pass
   
-v = VehicleEmpty()
-print(v)
-
 class Bus(Vehicle):
   pass
 
-b = Bus()
+
+
+v = VehicleEmpty()
+b = Bus(max_speed=15,mileage=10)
+print(b.max_speed)

@@ -11,6 +11,8 @@ def palindrome(word:str) -> bool:
 # Write a Python function that takes a number as a parameter and checks if the number is prime or not. 
 # A prime number (or a prime) is a natural number greater than 1 and that has no positive divisors other than 1 and itself.
 def is_prime(number:int) -> bool:
+  if number == 2:
+    return False
   for i in range(2,number):
     if number % i == 0:
       return False
@@ -18,8 +20,11 @@ def is_prime(number:int) -> bool:
 
 
 # Write a Python function to check whether a number is in a given range.
-def is_in_range(number,range) -> bool:
-  return number in range
+def is_in_range(number,down,up) -> bool:
+  if number >= down and number <= up:
+    return True
+  else:
+    return False
 
 # Write a Python function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument.
 # 5! = 1x2x3x4x5
